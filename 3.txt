@@ -1,0 +1,11 @@
+key = {1: 1, 2: 1}  # Номер числа: число Фибоначчи
+
+def memoCyc(num):
+    result = key.get(num)
+    while result == None:
+        result = memoCyc(num-2) + memoCyc(num-1)
+        key[num] = result
+    return result
+
+#Вывод
+print(memoCyc(6))

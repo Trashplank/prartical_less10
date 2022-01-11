@@ -1,0 +1,11 @@
+key = {1: 1, 2: 1}  # Номер числа: число Фибоначчи 
+
+def memFib(num):
+    result = key.get(num)
+    if result is None:
+        result = memFib(num-2) + memFib(num-1)
+        key[num] = result
+    return result
+
+#Вывод
+print(memFib(6))

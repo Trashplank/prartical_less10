@@ -1,0 +1,8 @@
+#Пространственная сложность => O(n) 
+#Временная сложность => O(2n)
+
+def fiba(n):
+    if n in (1, 2):
+        return 1
+    return fiba(n - 1) + fiba(n - 2)
+print(fiba(6))
